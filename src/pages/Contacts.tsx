@@ -6,7 +6,7 @@ const Contacts: React.FC = () => (
 		<section className="page-header">
 			<div className="container">
 				<h1>Свяжитесь с нами</h1>
-				<p>Готовы ответить на все ваши вопросы о iWinter Cloud</p>
+				<p>Готовы показать как Learn+ решит ваши задачи в обучении персонала</p>
 			</div>
 		</section>
 
@@ -16,20 +16,28 @@ const Contacts: React.FC = () => (
 					<div className="contact-info">
 						<h3>Контактная информация</h3>
 						<div className="contact-item">
-							<strong>Адрес:</strong>
-							<p>г. Москва, ул. Тверская, д. 25</p>
+							<strong>Компания:</strong>
+							<p>ООО "Айсаммер"</p>
 						</div>
 						<div className="contact-item">
 							<strong>Телефон:</strong>
-							<p>+7 (495) 123-45-67</p>
+							<p>+7 (495) 123-45-69</p>
 						</div>
 						<div className="contact-item">
 							<strong>Email:</strong>
-							<p>info@iwinter.cloud</p>
+							<p>sales@learn-platform.ru</p>
+						</div>
+						<div className="contact-item">
+							<strong>Техподдержка:</strong>
+							<p>support@learn-platform.ru</p>
 						</div>
 						<div className="contact-item">
 							<strong>Время работы:</strong>
-							<p>Пн-Пт: 9:00-18:00</p>
+							<p>Пн-Пт: 10:00-18:00</p>
+						</div>
+						<div className="contact-item">
+							<strong>Для партнеров:</strong>
+							<p>partners@learn-platform.ru</p>
 						</div>
 					</div>
 					<div className="contact-form-wrapper">

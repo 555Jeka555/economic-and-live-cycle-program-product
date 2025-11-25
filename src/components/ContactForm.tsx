@@ -1,10 +1,11 @@
 import React, {useState} from 'react'
 
 type FormData = {
-    name: string,
-    email: string,
-    company: string,
-    message: string,
+	name: string,
+	email: string,
+	company: string,
+	employees: string,
+	message: string,
 }
 
 const ContactForm: React.FC = () => {
@@ -12,12 +13,13 @@ const ContactForm: React.FC = () => {
 		name: '',
 		email: '',
 		company: '',
+		employees: '',
 		message: '',
 	})
 
 	const [isSubmitted, setIsSubmitted] = useState(false)
 
-	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
 		const {name, value} = e.target
 		setFormData(prev => ({
 			...prev,
@@ -27,21 +29,18 @@ const ContactForm: React.FC = () => {
 
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault()
-		// Эмуляция отправки формы
 		console.log('Форма отправлена:', formData)
 		setIsSubmitted(true)
-		setFormData({name: '', email: '', company: '', message: ''})
-
-		// Сброс сообщения об успехе через 5 секунд
+		setFormData({name: '', email: '', company: '', employees: '', message: ''})
 		setTimeout(() => setIsSubmitted(false), 5000)
 	}
 
 	return (
 		<div className="contact-form">
-			<h3>Оставьте заявку</h3>
+			<h3>Получите демо-доступ</h3>
 			{isSubmitted && (
 				<div className="success-message">
-                    Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.
+					Спасибо! Ваша заявка принята. Наш менеджер свяжется с вами для демонстрации платформы.
 				</div>
 			)}
 			<form onSubmit={handleSubmit}>
@@ -59,7 +58,7 @@ const ContactForm: React.FC = () => {
 					<input
 						type="email"
 						name="email"
-						placeholder="Email"
+						placeholder="Рабочий email"
 						value={formData.email}
 						onChange={handleChange}
 						required
@@ -69,23 +68,37 @@ const ContactForm: React.FC = () => {
 					<input
 						type="text"
 						name="company"
-						placeholder="Компания"
+						placeholder="Название компании"
 						value={formData.company}
 						onChange={handleChange}
+						required
 					/>
 				</div>
 				<div className="form-group">
-					<textarea
-						name="message"
-						placeholder="Сообщение"
-						rows={4}
-						value={formData.message}
+					<select
+						name="employees"
+						value={formData.employees}
 						onChange={handleChange}
 						required
-					></textarea>
+					>
+						<option value="">Количество сотрудников</option>
+						<option value="1-50">1-50</option>
+						<option value="51-200">51-200</option>
+						<option value="201-1000">201-1000</option>
+						<option value="1000+">1000+</option>
+					</select>
+				</div>
+				<div className="form-group">
+					<textarea
+			  name="message"
+			  placeholder="Ваши задачи в обучении сотрудников"
+			  rows={4}
+			  value={formData.message}
+			  onChange={handleChange}
+		  ></textarea>
 				</div>
 				<button type="submit" className="btn btn-primary">
-                    Отправить заявку
+					Получить демо-доступ
 				</button>
 			</form>
 		</div>

@@ -18,8 +18,8 @@ const Header = () => {
 			<div className="container">
 				<div className="header-content">
 					<Link to="/" className="logo" onClick={closeMenu}>
-						<span className="logo-icon">❄️</span>
-						iWinter Cloud
+						<span className="logo-icon">🎯</span>
+						Learn+
 					</Link>
 
 					<nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
@@ -36,6 +36,13 @@ const Header = () => {
 							onClick={closeMenu}
 						>
 							Возможности
+						</Link>
+						<Link
+							to="/structure"
+							className={`nav-link ${location.pathname === '/structure' ? 'active' : ''}`}
+							onClick={closeMenu}
+						>
+							О компании
 						</Link>
 						<Link
 							to="/contacts"

@@ -1,10 +1,10 @@
 import React from 'react'
 
 type FeatureProps = {
-    icon: string,
-    title: string,
-    description: string,
-    detailed?: boolean,
+	icon: string,
+	title: string,
+	description: string,
+	detailed?: boolean,
 }
 
 const Feature: React.FC<FeatureProps> = ({icon, title, description, detailed = false}) => (
