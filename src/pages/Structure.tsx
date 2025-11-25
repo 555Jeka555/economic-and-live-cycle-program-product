@@ -34,7 +34,7 @@ const Structure: React.FC = () => {
 		<div className="page structure">
 			<section className="page-header">
 				<div className="container">
-					<h1>Isummer"</h1>
+					<h1>Isummer</h1>
 					<p>Современная IT-компания с матричной структурой для максимальной эффективности</p>
 				</div>
 			</section>

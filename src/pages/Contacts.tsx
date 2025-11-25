@@ -13,6 +13,9 @@ const Contacts: React.FC = () => (
 		<section className="contact-content">
 			<div className="container">
 				<div className="contact-grid">
+					<div className="contact-form-wrapper">
+						<ContactForm />
+					</div>
 					<div className="contact-info">
 						<h3>Контактная информация</h3>
 						<div className="contact-item">
@@ -28,20 +31,9 @@ const Contacts: React.FC = () => (
 							<p>sales@learn-platform.ru</p>
 						</div>
 						<div className="contact-item">
-							<strong>Техподдержка:</strong>
-							<p>support@learn-platform.ru</p>
-						</div>
-						<div className="contact-item">
 							<strong>Время работы:</strong>
 							<p>Пн-Пт: 10:00-18:00</p>
 						</div>
-						<div className="contact-item">
-							<strong>Для партнеров:</strong>
-							<p>partners@learn-platform.ru</p>
-						</div>
-					</div>
-					<div className="contact-form-wrapper">
-						<ContactForm />
 					</div>
 				</div>
 			</div>
