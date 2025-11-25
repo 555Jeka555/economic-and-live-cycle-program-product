@@ -31,7 +31,6 @@ jobs:
 
       - name: Install and Build
         run: |
-          cd lab8
           npm install
           npm run build
           npm run postbuild
