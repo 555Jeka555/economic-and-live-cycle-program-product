@@ -221,6 +221,25 @@ body {
     background: linear-gradient(135deg, #f0fdf4 0%, #f8fafc 50%, #f0f9ff 100%);
     position: relative;
     overflow: hidden;
+    display: flex;
+
+}
+
+.hero-media {
+    position: relative;
+}
+
+.hero-image {
+    width: 50%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    margin: 0 auto;
+}
+
+.platform-preview {
+    position: relative;
+    z-index: 2;
 }
 
 @keyframes float {
@@ -993,6 +1012,7 @@ body {
 
     .hero {
         padding: 100px 0 60px;
+        display: block;
     }
 
     .features-preview,
@@ -1049,5 +1069,37 @@ body {
 
     .pricing-card {
         padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 1400px) {
+    .hero {
+        padding: 100px 0 30px;
+        display: block;
+    }
+
+    .image-container {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .hero-image {
+        border-radius: 8px;
+        margin-top: 20px;
+        width: 80%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .image-container {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .hero-image {
+        border-radius: 8px;
+        margin-top: 20px;
+        width: 80%;
     }
 }
