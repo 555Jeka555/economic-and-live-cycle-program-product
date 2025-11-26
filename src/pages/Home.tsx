@@ -64,7 +64,7 @@ const Home: React.FC = () => {
 					</div>
 				</div>
 				<img
-					src="../public/images/background.png"
+					src="./images/background.png"
 					alt="Learn+ платформа"
 					className="hero-image"
 				/>

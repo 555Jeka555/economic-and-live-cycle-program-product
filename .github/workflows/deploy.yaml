@@ -33,6 +33,7 @@ jobs:
         run: |
           npm install
           npm run build
+          cp -r public/images dist/images 2>/dev/null || echo "No public/images directory"
           npm run postbuild-linux
 
       - name: Setup Pages
