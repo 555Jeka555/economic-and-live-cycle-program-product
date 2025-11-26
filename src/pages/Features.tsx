@@ -96,7 +96,7 @@ const Features: React.FC = () => {
 										<li key={featureIndex}>{feature}</li>
 									))}
 								</ul>
-								<a href="/contacts" className="btn btn-primary">Выбрать тариф</a>
+								<a href="#/contacts" className="btn btn-primary">Выбрать тариф</a>
 							</div>
 						))}
 					</div>

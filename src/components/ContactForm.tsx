@@ -82,9 +82,8 @@ const ContactForm: React.FC = () => {
 						required
 					>
 						<option value="">Количество сотрудников</option>
-						<option value="1-50">1-50</option>
-						<option value="51-200">51-200</option>
-						<option value="201-1000">201-1000</option>
+						<option value="1-100">1-100</option>
+						<option value="101-1000">101-1000</option>
 						<option value="1000+">1000+</option>
 					</select>
 				</div>
